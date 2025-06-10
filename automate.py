@@ -1,9 +1,9 @@
-operations = {'customer': ['customer_option_1', 'customer_option_2', 'customer_option_3'],
+operations = {'customer': ['customer_option_1', 'customer_option_2', 'customer_option_3', "random_option"],
               'project': ['project_option_1', 'project_option_2', 'project_option_3'],
               'item': ["item_option_1", "item_option_2", "item_option_3"],
               'work_center': ['work_center_option_1', 'work_center_option_2','work_center_option_3'],
                'purchase': ['purchase_option_1', 'purchase_option_2', 'purchase_option_4'],
-               'do_work': ["do_work_option_1", "do_work_option_2", "do_work_option_3"],
+               'do_work': ["do_work_option_1", "do_work_option_2", "do_work_option_3", "work_harder"],
                'spare1': ['spare1_option_1', 'spare1_option_2', 'spare1_option_3'],
                'spare2': ['spare2_option_1', 'spare2_option_2', 'spare2_option_3'],
                'spare3': ['spare3_option_1', 'spare3_option_2', 'spare3_option_3'],
@@ -24,7 +24,7 @@ for key, value in operations.items():
 
 string += "def mainMenu():\n"
 string += f"    clear_layout()\n"
-string += "    widget.setFixedHeight(650)\n"
+string += f"    widget.setFixedHeight({len(operations)*65})\n"
 for i, (key, value) in enumerate(operations.items()):
     string += f"    {key}Button = CreateButton('{i+1}. {key.title()}')\n"
     string += f"    {key}Button.clicked.connect({key}_func)\n"
