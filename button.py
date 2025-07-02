@@ -16,7 +16,7 @@ class CreateButton(QPushButton):
             color: blue;
             background-color: white;
             border-style: outset;
-            border-width: 3px;
+            border-width: 5px;
             border-radius: 18px;
             border-color: blue;
             padding: 4px;

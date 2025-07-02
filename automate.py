@@ -27,7 +27,7 @@ string += f"    clear_layout()\n"
 string += "    widget.setFixedHeight(650)\n"
 for i, (key, value) in enumerate(operations.items()):
     string += f"    {key}Button = CreateButton('{i+1}. {key.title()}')\n"
-    # string += f"    {key}Button.setFocusPolicy(Qt.StrongFocus)\n"
+    string += f"    {key}Button.setFocusPolicy(Qt.StrongFocus)\n"
     string += f"    {key}Button.clicked.connect({key}_func)\n"
     string += f"    layout.addWidget({key}Button)\n"
 string += "    adminButton.setText('0. Admin')\n"

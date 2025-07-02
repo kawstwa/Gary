@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 from button import CreateButton
+from PySide6.QtCore import Qt
 import sys
 from automate import string
 
